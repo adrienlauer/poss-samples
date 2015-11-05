@@ -1,0 +1,28 @@
+{
+  "id": "demo",
+  "name": "W20 POSS demo",
+  "modules": {
+    "user": {
+      "path": "{demo}/modules/user",
+      "autoload": true
+    }
+  },
+  "i18n": {
+    "en": [
+      "{demo}/i18n/messages-en.json"
+    ],
+    "fr": [
+      "{demo}/i18n/messages-fr.json"
+    ]
+  },
+  "routes": {
+    "hello": {
+      "template": "<div class=\"container\"><h1>Hello World!</h1></div>",
+      "hidden": true
+    },
+    "user": {
+      "templateUrl": "{demo}/views/user.html",
+      "controller": "UserController"
+    }
+  }
+}

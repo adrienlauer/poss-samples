@@ -1,0 +1,16 @@
+{
+  "name": "seedstack-poss-web",
+  "version": "1.0.0",
+  "ignore": [
+    ".*",
+    "*.iml",
+    "bower_components",
+    "node_modules",
+    "gruntfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "w20": "~2.0",
+    "w20-business-theme": "~1.0"
+  }
+}

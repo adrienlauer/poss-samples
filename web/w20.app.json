@@ -1,0 +1,20 @@
+{
+  "bower_components/w20/core/w20-core.w20.json": {
+    "modules": {
+      "application": {
+        "id": "seedstack-poss-web",
+        "home": "/demo/hello"
+      },
+      "culture": {
+        "available": [
+          "en-US",
+          "fr-FR"
+        ],
+        "default": "en-US"
+      }
+    }
+  },
+  "bower_components/w20/ui/w20-ui.w20.json": {},
+  "bower_components/w20-business-theme/w20-business-theme.w20.json": {},
+  "demo/demo.w20.json": {}
+}

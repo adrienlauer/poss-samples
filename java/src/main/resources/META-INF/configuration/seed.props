@@ -1,0 +1,5 @@
+[org.seedstack.seed]
+base-packages = com.github.adrienlauer.poss
+
+[com.github.adrienlauer.poss]
+key = value
