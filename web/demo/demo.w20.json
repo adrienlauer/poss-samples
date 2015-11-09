@@ -2,18 +2,11 @@
   "id": "demo",
   "name": "W20 POSS demo",
   "modules": {
-    "user": {
-      "path": "{demo}/modules/user",
-      "autoload": true
-    }
+    "user": "{demo}/modules/user"
   },
   "i18n": {
-    "en": [
-      "{demo}/i18n/messages-en.json"
-    ],
-    "fr": [
-      "{demo}/i18n/messages-fr.json"
-    ]
+    "en": [ "{demo}/i18n/messages-en.json"],
+    "fr": [ "{demo}/i18n/messages-fr.json"]
   },
   "routes": {
     "hello": {
