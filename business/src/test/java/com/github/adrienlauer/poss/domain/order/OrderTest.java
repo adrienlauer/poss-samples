@@ -1,5 +1,6 @@
 package com.github.adrienlauer.poss.domain.order;
 
+import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,7 +24,7 @@ public class OrderTest {
     }
 
     @Test
-    public void testAddItem() throws Exception {
+    public void testAddItemIncreaseTheTotal() throws Exception {
         final int quantity = 5;
         final int productId = 1;
         final int price = 3;
@@ -34,7 +35,7 @@ public class OrderTest {
     }
 
     @Test
-    public void testRemoveItem() throws Exception {
+    public void testRemoveItemUpdateTheTotal() throws Exception {
         final int quantity = 5;
         final int productId = 1;
         final int price = 3;
@@ -44,5 +45,23 @@ public class OrderTest {
         underTest.removeItem(orderItem);
         assertThat(underTest.getTotal()).isZero();
         assertThat(underTest.getItems()).isEmpty();
+    }
+
+    @Test
+    public void itemQuantityShouldNotBeLowerThan1() throws Exception {
+        try {
+            new OrderItem(0, 1L, 50d);
+        } catch (IllegalArgumentException e) {
+            Assertions.assertThat(e.getMessage()).isEqualTo("The quantity cannot be lower than 1");
+        }
+    }
+
+    @Test
+    public void itemPriceShouldNotBeLowerThan0() throws Exception {
+        try {
+            new OrderItem(1, 1L, -1);
+        } catch (IllegalArgumentException e) {
+            Assertions.assertThat(e.getMessage()).isEqualTo("The price cannot be lower than 0");
+        }
     }
 }
