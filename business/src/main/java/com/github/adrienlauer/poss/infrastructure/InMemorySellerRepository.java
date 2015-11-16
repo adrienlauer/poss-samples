@@ -7,7 +7,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 public class InMemorySellerRepository extends BaseRepository<Seller, Long> {
-    private ConcurrentMap<Long, Seller> sellers = new ConcurrentHashMap<>();
+
+    private static final ConcurrentMap<Long, Seller> sellers = new ConcurrentHashMap<>();
 
     @Override
     protected Seller doLoad(Long sellerId) {

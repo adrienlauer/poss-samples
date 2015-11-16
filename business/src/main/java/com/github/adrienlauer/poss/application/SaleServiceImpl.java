@@ -25,8 +25,7 @@ class SaleServiceImpl implements SaleService {
             throw new IllegalArgumentException("Seller " + sellerId +  " cannot be found");
         }
 
-        BonusPolicy bonusPolicy = domainRegistry
-                .getPolicy(BonusPolicy.class, seller.getBonusPolicy());
+        BonusPolicy bonusPolicy = domainRegistry.getPolicy(BonusPolicy.class, seller.getBonusPolicy());
 
         double orderBonus = bonusPolicy.computeBonus(order);
         seller.addToMonthlyBonus(orderBonus);

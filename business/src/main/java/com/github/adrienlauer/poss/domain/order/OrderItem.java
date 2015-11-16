@@ -16,9 +16,17 @@ public class OrderItem extends BaseValueObject {
     private final double price;
 
     public OrderItem(int quantity, long productId, double price) {
-        this.quantity = quantity;
+        if (quantity > 0) {
+            this.quantity = quantity;
+        } else {
+            throw new IllegalArgumentException("The quantity cannot be lower than 1");
+        }
         this.productId = productId;
-        this.price = price;
+        if (price >= 0) {
+            this.price = price;
+        } else {
+            throw new IllegalArgumentException("The price cannot be lower than 0");
+        }
     }
 
     public int getQuantity() {
