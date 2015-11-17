@@ -1,5 +1,6 @@
-package com.github.adrienlauer.poss.application;
+package com.github.adrienlauer.poss;
 
+import com.github.adrienlauer.poss.application.SaleService;
 import com.github.adrienlauer.poss.domain.order.Order;
 import com.github.adrienlauer.poss.domain.order.OrderItem;
 import com.github.adrienlauer.poss.domain.seller.Seller;
@@ -16,7 +17,7 @@ import java.time.LocalDate;
  * @author pierre.thirouin@ext.mpsa.com (Pierre Thirouin)
  */
 @RunWith(SeedITRunner.class)
-public class SaleServiceIT {
+public class SaleServiceTest {
 
     public static final long SELLER_ID = 1111L;
     public static final long CUSTOMER_ID = 3333L;
